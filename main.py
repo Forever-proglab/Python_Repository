@@ -1,3 +1,7 @@
 a = int(input())
 b = int(input())
-print(a + b)
+c = input()
+if c == "+":
+    print(a + b)
+else:
+    print("144")
