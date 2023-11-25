@@ -10,6 +10,10 @@ while True:
         print(a * b)
     elif c == "/":
         print(a / b)
+    elif c == "^":
+        for i in range(b):
+            a *= a
+        print(a)
     contin = input()
     if contin == "not":
         break
