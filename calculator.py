@@ -14,7 +14,7 @@ while True:
         for i in range(b):
             a *= a
         print(a)
-    contin = input()
+    contin = input('Do you want to continue? Write "yes" or "no"')
     if contin == "not":
         break
         
