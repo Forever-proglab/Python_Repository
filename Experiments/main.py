@@ -8,6 +8,8 @@ def main():
         l = int(input())
         for g in range(1, l+1):
             k,u = int(input()), int(input())
+            p = k
+        
             
 
 
