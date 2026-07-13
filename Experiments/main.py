@@ -9,11 +9,12 @@ def main():
         l = int(input())
         for _ in range(1, l+1):
             k,u = map(int, input().split())
-            sum += 1
+            sum += k
             dict[k]=u
-    for key, value in dict.items():
-        print(f"{key} {value}")
-            
+    for e in range(1, sum+1):
+        if dict.get(e) != None:
+            print(e, dict[e])
+
 
 
 
