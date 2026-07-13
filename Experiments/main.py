@@ -8,10 +8,10 @@ def main():
     for _ in range(1, m+1):
         l = int(input())
         for _ in range(1, l+1):
-            k,u = int(input()), int(input())
+            k,u = map(int, input().split())
             sum += 1
             dict[k]=u
-    print(dict.items())
+    return print(dict.items())
             
 
 
