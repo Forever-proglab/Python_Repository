@@ -11,7 +11,8 @@ def main():
             k,u = map(int, input().split())
             sum += 1
             dict[k]=u
-    return print(dict.items())
+    for key, value in dict.items():
+        print(f"{key} {value}")
             
 
 
