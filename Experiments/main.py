@@ -11,7 +11,7 @@ def main():
             k,u = map(int, input().split())
             sum += k
             dict[k]=u
-    for e in range(1, sum+1):
+    for e in range(0, sum+1):
         if dict.get(e) != None:
             print(e, dict[e])
 
