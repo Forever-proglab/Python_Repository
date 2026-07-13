@@ -2,14 +2,16 @@ import sys
 
 
 def main():
-    dict = []
+    dict = {}
+    sum = 0
     m = int(input())
-    for i in range(1, m+1):
+    for _ in range(1, m+1):
         l = int(input())
-        for g in range(1, l+1):
+        for _ in range(1, l+1):
             k,u = int(input()), int(input())
-            p = k
-        
+            sum += 1
+            dict[k]=u
+    print(dict.items())
             
 
 
