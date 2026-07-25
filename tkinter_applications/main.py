@@ -37,7 +37,7 @@ height_lb.grid(row=3, column=1)
 
 weight_lb = Label(
     frame,
-    text="Введите свой вес (в кг)  ",
+    text="Введите свою массу (в кг)  ",
 )
 weight_lb.grid(row=4, column=1)
 
