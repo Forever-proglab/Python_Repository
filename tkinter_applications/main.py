@@ -9,11 +9,11 @@ def calculate_bmi():
     bmi = round(bmi, 4)
 
     if bmi < 18.5:
-        messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует недостаточному весу')
+        messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует недостаточной массе')
     elif (bmi > 18.5) and (bmi < 24.9):
-        messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует нормальному весу')
+        messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует нормальной массе')
     elif (bmi > 24.9) and (bmi < 29.9):
-        messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует избыточному весу')
+        messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует избыточной массе')
     else:
         messagebox.showinfo('bmi-pythonguides', f'ИМТ {bmi} соответствует ожирению')
 
