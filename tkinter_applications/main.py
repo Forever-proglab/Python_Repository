@@ -1,7 +1,17 @@
 from tkinter import *
 from tkinter import messagebox
-
-
+from time import *
+def calc_age():
+    t = time()
+    y = int(hy.get())
+    m = int(hm.get())
+    d = int(hd.get())
+    o=0
+    y1 = 0
+    m1 = 0
+    d1 = 0
+    o = int(t) - y*365*24*60*60+m*31*24*60*60+d*24*60*60
+    messagebox.showinfo("age", f"Вам {o//(365*24*60*60)} лет, {o/(31*24*60*60)} месяцев, {o/(24*60*60)} дней")
 def calculate_bmi():
     kg = int(weight_tf.get())
     m = int(height_tf.get()) / 100
@@ -19,8 +29,8 @@ def calculate_bmi():
 
 
 window = Tk()
-window.title('Калькулятор индекса массы тела (ИМТ)')
-window.geometry('400x300')
+window.title('Калькулятор индекса массы тела (ИМТ) или подробный расчёт возраста')
+window.geometry('1000x1000')
 
 frame = Frame(
     window,
@@ -28,6 +38,43 @@ frame = Frame(
     pady=10
 )
 frame.pack(expand=True)
+
+cy = Label(
+    frame,
+    text="Год:"
+)
+cy.grid(row=2, column=3)
+hy = Entry(
+    frame,
+)
+hy.grid(row=2, column=4)
+
+cm = Label(
+    frame,
+    text="Месяц:"
+)
+cm.grid(row=3, column=3)
+hm = Entry(
+    frame,
+)
+hm.grid(row=3, column=4)
+
+cd = Label(
+    frame,
+    text="День:"
+)
+cd.grid(row=4, column=3)
+hd = Entry(
+    frame,
+)
+hd.grid(row=4, column=4)
+
+c_btn = Button(
+    frame,
+    text='Рассчитать возраст',
+    command=calc_age
+)
+c_btn.grid(row=5, column=4)
 
 height_lb = Label(
     frame,
