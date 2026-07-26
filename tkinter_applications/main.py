@@ -29,7 +29,7 @@ def calculate_bmi():
 
 
 window = Tk()
-window.title('Калькулятор индекса массы тела (ИМТ) или подробный расчёт возраста')
+window.title('Калькулятор физиологических показателей человека')
 window.geometry('1000x1000')
 
 frame = Frame(
