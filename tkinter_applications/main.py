@@ -38,7 +38,11 @@ frame = Frame(
     pady=10
 )
 frame.pack(expand=True)
-
+ha= Label(
+    frame,
+    text="Вычисление возраста человека"
+)
+ha.grid(row=1, column=3)
 cy = Label(
     frame,
     text="Год:"
@@ -75,6 +79,11 @@ c_btn = Button(
     command=calc_age
 )
 c_btn.grid(row=5, column=4)
+hm= Label(
+    frame,
+    text="Вычисление индекса массы тела"
+)
+hm.grid(row=2, column=1)
 
 height_lb = Label(
     frame,
