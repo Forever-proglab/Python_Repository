@@ -1,6 +1,6 @@
 import tkinter as tk
 import random
-import time
+import time, math
 # Настройки
 WIDTH = 400         # Ширина окна
 HEIGHT = 400        # Высота окна
@@ -11,11 +11,9 @@ scoret = 0
 f = open("data.txt", "a")
 # Окно игры
 root = tk.Tk()
+t0 = time.time()
 root.title("Змейка | Счёт: 0")
 root.resizable(False, False)
-tn = time.time()
-th = 0
-u = 0
 canvas = tk.Canvas(
     root, width=WIDTH, height=HEIGHT,
     bg="black", highlightthickness=0
@@ -116,15 +114,15 @@ def check_self_collision():
 def end_game():
     global game_over
     game_over = True
+    t = time.time()
+    dt = t - t0
     canvas.create_text(
         WIDTH // 2, HEIGHT // 2,
-        text=f"Игра окончена! Счёт: {score}",
+        text=f"Игра окончена! Счёт: {score} Game time:{dt//60} minutes, {round(dt%60, 4)} seconds",
         fill="white",
-        font=("Arial", 24)
+        font=("Times New Roman", 10)
     )
-    scoret = str(score)
-    th = time.time()
-    f.write(time.ctime(th) + " " + f"Points:{scoret}" + '\n')
+    f.write(time.ctime(t) + f" Points:{score} Game time:{dt//60} minutes, {round(dt%60, 4)} seconds" + '\n')
     f.close()
 # Обновление заголовка окна
 def update_title():
