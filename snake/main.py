@@ -7,7 +7,6 @@ HEIGHT = 400        # Высота окна
 DIRECTIONS = ["Up", "Down", "Left", "Right"]  # Допустимые направления
 CELL_SIZE = 10      # Размер одной клетки (и еды, и сегмента змейки)
 DELAY = 100    # Задержка между кадрами (мс)
-scoret = 0
 f = open("data.txt", "a")
 # Окно игры
 root = tk.Tk()
