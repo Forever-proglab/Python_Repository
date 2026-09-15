@@ -47,5 +47,14 @@
 #     if t:
 #         break
 con = 1
-
-print("Это калькулятор матриц! Сколько матриц вы хотите ввести, одну или две?")
+while con != 0:
+    m, n, l, k = 0,0,0,0
+    m1, m2=[],[]
+    print("Это калькулятор матриц! Сколько матриц вы хотите ввести, одну или две?")
+    if input()=='один':
+        m, n = int(input()), int(input())
+        for i in range(1, m+1):
+            m1.append([int(input()) for d in range(1, n+1)])
+    for i in range(len(m1)):
+        print(m1[i])
+    con = int(input())
