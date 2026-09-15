@@ -50,11 +50,26 @@ con = 1
 while con != 0:
     m, n, l, k = 0,0,0,0
     m1, m2=[],[]
-    print("Это калькулятор матриц! Сколько матриц вы хотите ввести, одну или две?")
-    if input()=='один':
+    print("This is matrix calculator! How many matrixs you want to enter, one or two?")
+    u = input()
+    if u=='one':
         m, n = int(input()), int(input())
         for i in range(1, m+1):
             m1.append([int(input()) for d in range(1, n+1)])
-    for i in range(len(m1)):
-        print(m1[i])
+        for i in range(len(m1)):
+            print(m1[i])
+        print(f'{m}×{n}')
+    elif u=='two':
+        m, n = int(input()), int(input())
+        for i in range(1, m + 1):
+            m1.append([int(input()) for d in range(1, n + 1)])
+        l, k = int(input()), int(input())
+        for i in range(1, l + 1):
+            m2.append([int(input()) for d in range(1, k + 1)])
+        for i in range(len(m1)):
+            print(m1[i])
+        print(f'{m}×{n}')
+        for i in range(len(m2)):
+            print(m2[i])
+        print(f'{l}×{k}')
     con = int(input())
