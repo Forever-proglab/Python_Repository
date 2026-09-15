@@ -12,6 +12,8 @@
 #         if dict.get(e) != None:
 #             print(e, dict[e])
 # main()
+
+
 # n = int(input())
 # k=0
 # for i in str(n):
@@ -25,6 +27,8 @@
 #     n=k
 #     print(k)
 # print(k)
+
+
 # t = False
 # for e in range(1,151):
 #     for a in range(1, 151):
