@@ -60,6 +60,11 @@ while con != 0:
         for i in range(len(m1)):
             print(m1[i])
         print(f'{m}×{n}')
+        h = int(input())
+        m3=[[elem * h for elem in row] for row in m1]
+        for i in range(len(m3)):
+            print(m3[i])
+        print(f'{m}×{n}')
     elif u=='two':
         m, n = int(input()), int(input())
         for i in range(1, m + 1):
@@ -84,12 +89,13 @@ while con != 0:
                     m3.append([(m1[i][d] - m2[i][d]) for d in range(0, n)])
         elif c == '*':
             if n==l:
-                for i in range(0, m):
-                    for d in range(0, k):
+                m3 = [[0 for _ in range(k)] for _ in range(m)]
+                for i in range(m):
+                    for j in range(k):
                         s = 0
-                        for h in range(0, l):
-                            s += m1[i][l]*m2[i][l]
-                        m3[i][k]=s
-        for i in range(len(m3)):
-            print(m3[i])
+                        for h in range(n):
+                            s += m1[i][h] * m2[h][j]
+                        m3[i][j] = s
+    for i in range(len(m3)):
+        print(m3[i])
     con = int(input())
