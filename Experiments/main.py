@@ -47,10 +47,11 @@
 #     if t:
 #         break
 con = 1
+s = 0
 while con != 0:
     m, n, l, k = 0,0,0,0
-    m1, m2=[],[]
-    print("This is matrix calculator! How many matrixs you want to enter, one or two?")
+    m1, m2, m3=[],[],[]
+    print("This is matrix calculator! How many matrices you want to enter, one or two?")
     u = input()
     if u=='one':
         m, n = int(input()), int(input())
@@ -72,4 +73,23 @@ while con != 0:
         for i in range(len(m2)):
             print(m2[i])
         print(f'{l}×{k}')
+        c = input("What do you want to do with matrices? Enter +, -, *")
+        if c=='+':
+            if m==l and n==k:
+                for i in range(0, m):
+                    m3.append([(m1[i][d]+m2[i][d]) for d in range(0, n)])
+        elif c == '-':
+            if m == l and n == k:
+                for i in range(0, m):
+                    m3.append([(m1[i][d] - m2[i][d]) for d in range(0, n)])
+        elif c == '*':
+            if n==l:
+                for i in range(0, m):
+                    for d in range(0, k):
+                        s = 0
+                        for h in range(0, l):
+                            s += m1[i][l]*m2[i][l]
+                        m3[i][k]=s
+        for i in range(len(m3)):
+            print(m3[i])
     con = int(input())
