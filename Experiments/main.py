@@ -65,6 +65,7 @@ while con != 0:
             m1.append([int(input()) for d in range(1, n + 1)])
         l, k = int(input()), int(input())
         for i in range(1, l + 1):
+            
             m2.append([int(input()) for d in range(1, k + 1)])
         for i in range(len(m1)):
             print(m1[i])
