@@ -55,8 +55,14 @@ while con != 0:
     u = input()
     if u=='one':
         m, n = int(input()), int(input())
-        for i in range(1, m+1):
-            m1.append([int(input()) for d in range(1, n+1)])
+        m1 = [[0 for _ in range(n)] for _ in range(m)]
+        for i in range(0, m):
+            for d in range(0, n):
+                y = input()
+                if 'j' in y:
+                    m1[i][d]=complex(y)
+                else:
+                    m1[i][d]=int(y)
         for i in range(len(m1)):
             print(m1[i])
         print(f'{m}×{n}')
@@ -67,11 +73,23 @@ while con != 0:
         print(f'{m}×{n}')
     elif u=='two':
         m, n = int(input()), int(input())
-        for i in range(1, m + 1):
-            m1.append([int(input()) for d in range(1, n + 1)])
+        m1 = [[0 for _ in range(n)] for _ in range(m)]
+        for i in range(0, m):
+            for d in range(0, n):
+                y = input()
+                if 'j' in y:
+                    m1[i][d] = complex(y)
+                else:
+                    m1[i][d] = int(y)
         l, k = int(input()), int(input())
-        for i in range(1, l + 1):
-            m2.append([int(input()) for d in range(1, k + 1)])
+        m2 = [[0 for _ in range(k)] for _ in range(l)]
+        for i in range(0, l):
+            for d in range(0, k):
+                y = input()
+                if 'j' in y:
+                    m2[i][d] = complex(y)
+                else:
+                    m2[i][d] = int(y)
         for i in range(len(m1)):
             print(m1[i])
         print(f'{m}×{n}')
@@ -79,14 +97,19 @@ while con != 0:
             print(m2[i])
         print(f'{l}×{k}')
         c = input("What do you want to do with matrices? Enter +, -, *")
+        code1 = ([m1[i] for i in range(len(m1))])
+        code2 = ([m2[i] for i in range(len(m2))])
         if c=='+':
             if m==l and n==k:
                 for i in range(0, m):
                     m3.append([(m1[i][d]+m2[i][d]) for d in range(0, n)])
+            else:
+                print(f'Матрицы {code1} и {code2} невозможно сложить')
         elif c == '-':
             if m == l and n == k:
                 for i in range(0, m):
                     m3.append([(m1[i][d] - m2[i][d]) for d in range(0, n)])
+            print(f'Из матрицы {code1} невозможно вычесть матрицу {code2}')
         elif c == '*':
             if n==l:
                 m3 = [[0 for _ in range(k)] for _ in range(m)]
@@ -96,6 +119,8 @@ while con != 0:
                         for h in range(n):
                             s += m1[i][h] * m2[h][j]
                         m3[i][j] = s
+            else:
+                print(f'Матрицы {code1} и {code2} невозможно умножить на друг друга')
     for i in range(len(m3)):
         print(m3[i])
     con = int(input())
