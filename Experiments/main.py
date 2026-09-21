@@ -66,8 +66,12 @@ while con != 0:
         for i in range(len(m1)):
             print(m1[i])
         print(f'{m}×{n}')
-        h = int(input())
-        m3=[[elem * h for elem in row] for row in m1]
+        h = input()
+        if 'j' in h:
+            h1 = complex(h)
+        else:
+            h1 = h
+        m3=[[elem * h1 for elem in row] for row in m1]
         for i in range(len(m3)):
             print(m3[i])
         print(f'{m}×{n}')
