@@ -51,7 +51,7 @@ s = 0
 while con != 0:
     m, n, l, k = 0,0,0,0
     m1, m2, m3=[],[],[]
-    print("This is matrix calculator! How many matrices you want to enter, one or two?")
+    print("This is matrix calculator! How many matrices you want to enter, one or two? Enter one or two")
     u = input()
     if u=='one':
         m, n = int(input('Введите количество строк:')), int(input('Введите количество столбцов:'))
@@ -76,7 +76,7 @@ while con != 0:
             print(m3[i])
         print(f'{m}×{n}')
     elif u=='two':
-        m, n = int(input()), int(input())
+        m, n = int(input('Введите количество строк первой матрицы:')), int(input('Введите количество столбцов первой матрицы:'))
         m1 = [[0 for _ in range(n)] for _ in range(m)]
         for i in range(0, m):
             for d in range(0, n):
@@ -85,7 +85,7 @@ while con != 0:
                     m1[i][d] = complex(y)
                 else:
                     m1[i][d] = int(y)
-        l, k = int(input()), int(input())
+        l, k = int(input('Введите количество строк второй матрицы:')), int(input('Введите количество столбцов второй матрицы:'))
         m2 = [[0 for _ in range(k)] for _ in range(l)]
         for i in range(0, l):
             for d in range(0, k):
