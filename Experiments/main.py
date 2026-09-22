@@ -54,7 +54,8 @@ while con != 0:
     print("This is matrix calculator! How many matrices you want to enter, one or two?")
     u = input()
     if u=='one':
-        m, n = int(input()), int(input())
+        m, n = int(input('Введите количество строк:')), int(input('Введите количество столбцов:'))
+
         m1 = [[0 for _ in range(n)] for _ in range(m)]
         for i in range(0, m):
             for d in range(0, n):
@@ -66,7 +67,7 @@ while con != 0:
         for i in range(len(m1)):
             print(m1[i])
         print(f'{m}×{n}')
-        h = input()
+        h = input('Введите число, на которое вы хотите умножить матрицу:')
         if 'j' in h:
             h1 = complex(h)
         else:
