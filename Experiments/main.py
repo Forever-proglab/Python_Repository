@@ -55,7 +55,6 @@ while con != 0:
     u = input()
     if u=='one':
         m, n = int(input('Введите количество строк:')), int(input('Введите количество столбцов:'))
-
         m1 = [[0 for _ in range(n)] for _ in range(m)]
         for i in range(0, m):
             for d in range(0, n):
