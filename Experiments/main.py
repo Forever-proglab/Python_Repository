@@ -70,7 +70,7 @@ while con != 0:
         if 'j' in h:
             h1 = complex(h)
         else:
-            h1 = h
+            h1 = int(h)
         m3=[[elem * h1 for elem in row] for row in m1]
         for i in range(len(m3)):
             print(m3[i])
