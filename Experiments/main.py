@@ -58,7 +58,7 @@ while con != 0:
         m1 = [[0 for _ in range(n)] for _ in range(m)]
         for i in range(0, m):
             for d in range(0, n):
-                y = input()
+                y = input(f'Введите число {i+1} строки {d+1} столбца матрицы')
                 if 'j' in y:
                     m1[i][d]=complex(y)
                 else:
@@ -80,7 +80,7 @@ while con != 0:
         m1 = [[0 for _ in range(n)] for _ in range(m)]
         for i in range(0, m):
             for d in range(0, n):
-                y = input()
+                y = input(f'Введите число {i+1} строки {d+1} столбца матрицы')
                 if 'j' in y:
                     m1[i][d] = complex(y)
                 else:
@@ -89,7 +89,7 @@ while con != 0:
         m2 = [[0 for _ in range(k)] for _ in range(l)]
         for i in range(0, l):
             for d in range(0, k):
-                y = input()
+                y = input(f'Введите число {i+1} строки {d+1} столбца матрицы')
                 if 'j' in y:
                     m2[i][d] = complex(y)
                 else:
@@ -100,7 +100,7 @@ while con != 0:
         for i in range(len(m2)):
             print(m2[i])
         print(f'{l}×{k}')
-        c = input("What do you want to do with matrices? Enter +, -, *")
+        c = input("What do you want to do with matrices? Enter + or - or *")
         code1 = ([m1[i] for i in range(len(m1))])
         code2 = ([m2[i] for i in range(len(m2))])
         if c=='+':
