@@ -1,3 +1,4 @@
+from time import  *
 # def main():
 #     dict = {}
 #     sum = 0
@@ -128,5 +129,9 @@
 #     for i in range(len(m3)):
 #         print(m3[i])
 #     con = int(input("Введите 0, если хотите выйти из программы, или любое другое целое число, если хотите продолжить пользоваться калькулятором"))
-t = int(eval(input()))
-print(t)
+def power_of_cpu(m):
+    t1 = time()
+    for i in range(m):
+        print(i, sep='\n')
+    print(f'{time()-t1} seconds have passed')
+power_of_cpu(1000)
