@@ -134,5 +134,4 @@ def power_of_cpu(m):
     for i in range(m):
         print(i, sep='\n')
     print(f'{time()-t1} seconds have passed        ')
-    
 power_of_cpu(1000)
