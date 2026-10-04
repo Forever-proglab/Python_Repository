@@ -8,3 +8,6 @@
 0.0019974708557128906 seconds have passed 
 0.002003908157348633 seconds have passed 
 0.0029916763305664062 seconds have passed 
+0.07395267486572266 seconds have passed 
+0.02176189422607422 seconds have passed 
+0.004194498062133789 seconds have passed 
